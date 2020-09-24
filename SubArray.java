@@ -76,7 +76,10 @@ class SubArray{
                 }
 
             }
-
+            if(start==0 && end==0){
+                start= -2;
+                end = -2;
+            }
             System.out.println(start+1);
             System.out.println(end+1);
 
