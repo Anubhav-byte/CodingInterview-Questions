@@ -1,0 +1,37 @@
+/*Program to count the number of inversion in 1D array */
+
+
+
+
+import java.util.Scanner;
+class InversionOne{
+    public static void main(String[] args){
+
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter no of test cases");
+        int t=input.nextInt();
+
+        for(int d=0; d<t; d++){
+
+            System.out.println("Enter the size of array");
+            int n=input.nextInt();
+
+            System.out.println("Enter Array:");
+            int[] oned_array=new int[50];
+
+            for(int i=0; i < n ; i++)
+                oned_array[i]=input.nextInt();
+
+            int count = 0;
+
+            for(int i=0 ; i< n ; i++){
+                for(int j=i+1; j<n ; j++){
+                    if(oned_array[i] > oned_array[j]){
+                        count++;
+                    }
+                }
+            }
+            System.out.println("The number of inversion in this array is: " + count);
+        }
+    }
+}
